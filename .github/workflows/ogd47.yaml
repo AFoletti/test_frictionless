@@ -4,11 +4,11 @@ name: ogd47
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - ogd47/trigger.csv
   pull_request:
-    branches:
-      - main
+    paths:
+      - ogd47/trigger.csv
       
 jobs:
   validate:
