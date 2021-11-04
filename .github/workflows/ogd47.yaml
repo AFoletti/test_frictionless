@@ -11,4 +11,4 @@ jobs:
       - name: Validate data
         uses: frictionlessdata/repository@v1
         with:
-            inquiry: people
+            inquiry: ogd47
