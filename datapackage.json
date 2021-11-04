@@ -1,0 +1,115 @@
+{
+    "profile": "tabular-data-package",
+    "resources": [{
+            "name": "ogd61_vollzugsresultate_lnf.csv",
+            "path": "https://www.uvek-gis.admin.ch/BFE/ogd/61/ogd61_vollzugsresultate_lnf.csv",
+            "profile": "tabular-data-resource",
+            "schema": {
+                "fields": [{
+                        "name": "jahr",
+                        "type": "year",
+                        "format": "default",
+                        "title": "Jahr",
+                        "description": "Jahr"
+                    }, {
+                        "name": "nameeg",
+                        "type": "string",
+                        "format": "default",
+                        "title": "Importeur / Emissionsgemeinschaft",
+                        "description": "Name des Importeurs oder der Emissionsgemeinschaft gemäss Anmeldung BFE"
+                    }, {
+                        "name": "nischenpool",
+                        "type": "string",
+                        "format": "default",
+                        "title": "Fahrzeugpool",
+                        "description": "Bezeichnet die LNF-Flotte, die für die Sanktionsberechnung berücksichtigt wird. Ein Importeur kann im Falle von Spezialzielen über mehrere Fahrzeugpools verfügen. Standard: Markenunabhängige Abrechnung mit 95 g/km-Ziel. Markenname XY: Klein- oder Nischenherstellerziel für die entsprechende Marke."
+                    }, {
+                        "name": "anzfz_total",
+                        "type": "integer",
+                        "format": "default",
+                        "title": "Anzahl LNF",
+                        "description": "Anzahl erstmals in der Schweiz zugelassene Lieferwagen und leichte Sattelschlepper im Geltungsbereich der CO2-Emissionsvorschriften."
+                    }, {
+                        "name": "leergewicht",
+                        "type": "integer",
+                        "format": "default",
+                        "title": "Durchschnittliches Leergewicht in kg",
+                        "description": "Durchschnittliches Leergewicht aller im Referenzjahr in der Schweiz erstmals zugelassenen Lieferwagen und leichte Sattelschlepper des entsprechenden Importeurs. Wird für die Berechnung der individuellen Zielvorgabe verwendet."
+                    }, {
+                        "name": "co2",
+                        "type": "integer",
+                        "format": "default",
+                        "title": "Durchschnitt CO2 in g/km (ungewichtet)",
+                        "description": "Ungewichteter Durchschnitt der spezifischen CO2-Emissionen aller im Referenzjahr erstmals zugelassenen Lieferwagen und leichte Sattelschlepper im entsprechenden Fahrzeugpool, gerundet auf eine Nachkommastelle."
+                    }, {
+                        "name": "co2_massgebend",
+                        "type": "number",
+                        "format": "default",
+                        "title": "Durchschnitt CO2 in g/km (gewichtet)",
+                        "description": "Sanktionsrelevanter CO2-Durchschnitt der im Referenzjahr zugelassenen Lieferwagen und leichte Sattelschlepper gerundet auf eine Nachkommastelle (Ausschluss der 15% Fahrzeuge mit den höchsten CO2-Emisionen in der Flotte, doppelte Gewichtung von Fahrzeugen mit CO2-Emissionen von weniger als 50 Gramm, 20% reduzierte CO2-Emissionen von Erdgas/Biogas-LNF)."
+                    }, {
+                        "name": "ziel",
+                        "type": "number",
+                        "format": "default",
+                        "title": "CO2-Ziel in g/km",
+                        "description": "Individuelle Zielvorgabe, basierend auf dem mittleren Leergewicht, gerundet auf eine Nachkommastelle."
+                    }, {
+                        "name": "ziel_abw",
+                        "type": "number",
+                        "format": "default",
+                        "title": "Zielabweichung in g/km",
+                        "description": "Differenz zwischen gewichtetem CO2-Wert und individueller Zielvorgabe, abgerundet auf eine Nachkommastelle"
+                    }, {
+                        "name": "sanktion_final",
+                        "type": "number",
+                        "format": "default",
+                        "title": "Sanktion CHF",
+                        "description": "Sanktion in Schweizer Franken"
+                    }, {
+                        "name": "gsc_beansprucht",
+                        "type": "number",
+                        "format": "default",
+                        "title": "SC beansprucht",
+                        "description": "Beanspruchte Supercredits im Referenzjahr"
+                    }, {
+                        "name": "gsc_reserve",
+                        "type": "number",
+                        "format": "default",
+                        "title": "SC Reserve",
+                        "description": "Supercredits-Reserve für die Folgejahre"
+                    }, {
+                        "name": "anteil_lev",
+                        "type": "number",
+                        "format": "default",
+                        "title": "LEV-Anteil (Prozentsatz)",
+                        "description": "Anteil (Prozentsatz) Fahrzeuge mit weniger als 50 Gramm CO2-Emissionen in der Flotte"
+                    }
+                ]
+            },
+            "title": "Vollzugsresultate der CO2-Emissionsvorschriften für Lieferwagen und leichte Sattelschlepper",
+            "format": "csv",
+            "encoding": "UTF-8",
+            "description": "Seit dem 1. Januar 2020 gelten in der Schweiz - analog zur EU - CO2-Emissionsvorschriften für Lieferwagen und leichte Sattelschlepper. Sie verpflichten die Schweizer Auto-Importeure, die Emissionen der erstmals zum Verkehr in der Schweiz zugelassenen Lieferwagen und leichte Sattelschlepper zu senken. Bis Ende 2022 müssen diese im Durchschnitt auf 147 Gramm CO2 pro Kilometer gesenkt werden müssen. Im Zuge der Umstellung des Messverfahrens der CO2-Emissionen, wurde der CO2-Zielwert per 1. Januar 2021 von 147 g CO2/km, auf 186 g CO2/km angepasst. Überschreitungen werden mit einer Sanktionsabgabe gebüsst. Kurzbericht über die Vollzugsresultate des Vorjahres inkl. aggregierten Kennzahlen. Datengrundlage sind Zulassungsdaten (MOFIS), ergänzt um technische Daten (Typengenehmigungsdatenbank TARGA und vom ASTRA eigens erfasst Daten) sowie Verknüpfungen mit Daten zu registrierten Grossimporteuren. Herausgabe der Resultate müsste möglich sein. Rechtsgrundlage: CO2-Verordnung, Art. 36, Abs. 3"
+        }
+    ],
+    "name": "ogd61_bfe",
+    "title": "Vollzugsresultate der CO2-Emissionsvorschriften für Lieferwagen und leichte Sattelschlepper",
+    "description": "Seit dem 1. Januar 2020 gelten in der Schweiz - analog zur EU - CO2-Emissionsvorschriften für Lieferwagen und leichte Sattelschlepper. Sie verpflichten die Schweizer Auto-Importeure, die Emissionen der erstmals zum Verkehr in der Schweiz zugelassenen Lieferwagen und leichte Sattelschlepper zu senken. Bis Ende 2022 müssen diese im Durchschnitt auf 147 Gramm CO2 pro Kilometer gesenkt werden müssen. Im Zuge der Umstellung des Messverfahrens der CO2-Emissionen, wurde der CO2-Zielwert per 1. Januar 2021 von 147 g CO2/km, auf 186 g CO2/km angepasst. Überschreitungen werden mit einer Sanktionsabgabe gebüsst. Kurzbericht über die Vollzugsresultate des Vorjahres inkl. aggregierten Kennzahlen. Datengrundlage sind Zulassungsdaten (MOFIS), ergänzt um technische Daten (Typengenehmigungsdatenbank TARGA und vom ASTRA eigens erfasst Daten) sowie Verknüpfungen mit Daten zu registrierten Grossimporteuren. Herausgabe der Resultate müsste möglich sein. Rechtsgrundlage: CO2-Verordnung, Art. 36, Abs. 3",
+    "homepage": "http://www.bfe.admin.ch/ogd61",
+    "contributors": [{
+            "title": "OGD Fachstelle",
+            "role": "author"
+        }
+    ],
+    "temporal": {
+        "name": "Zeitliche Abdeckung",
+        "start": "2019-12-31",
+        "end": "2020-12-31"
+    },
+    "licenses": [{
+            "name": "O-By",
+            "title": "Freie Nutzung. Quellenangabe ist Pflicht.",
+            "path": "https://opendata.swiss/de/terms-of-use"
+        }
+    ]
+}
