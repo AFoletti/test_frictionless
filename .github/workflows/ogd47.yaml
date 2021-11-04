@@ -2,6 +2,14 @@ name: ogd47
 
 # Test the OGD47 data in https://www.uvek-gis.admin.ch/BFE/ogd/47/ogd47_vollzugsresultate_pw.csv
 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+      
 jobs:
   validate:
     runs-on: ubuntu-latest
