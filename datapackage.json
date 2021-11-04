@@ -44,7 +44,7 @@
                },
                {
                   "name" : "co2",
-                  "type" : "integer",
+                  "type" : "number",
                   "format" : "default",
                   "title" : "Durchschnitt CO2 in g/km (ungewichtet)",
                   "description" : "Ungewichteter Durchschnitt der spezifischen CO2-Emissionen aller im Referenzjahr erstmals zugelassenen Lieferwagen und leichte Sattelschlepper im entsprechenden Fahrzeugpool, gerundet auf eine Nachkommastelle."
