@@ -1,0 +1,14 @@
+name: ogd61
+
+# Test the OGD61 data in https://www.uvek-gis.admin.ch/BFE/ogd/61/ogd61_vollzugsresultate_lnf.csv
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Validate data
+        uses: frictionlessdata/repository@v1
+        with:
+            inquiry: ogd61
