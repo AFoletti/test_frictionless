@@ -1,7 +1,7 @@
 ogd47:
   tasks:
-    - source: ogd47/*.json
+    - source: ogd47/trigger.csv
 
 ogd61:
   tasks:
-    - source: ogd61/*.json
+    - source: ogd61/trigger.csv
