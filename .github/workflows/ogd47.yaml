@@ -1,0 +1,14 @@
+name: ogd47
+
+# Test the OGD47 data in https://www.uvek-gis.admin.ch/BFE/ogd/47/ogd47_vollzugsresultate_pw.csv
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Validate data
+        uses: frictionlessdata/repository@v1
+        with:
+            inquiry: people
