@@ -1,0 +1,110 @@
+{
+    "profile": "tabular-data-package",
+    "resources": [{
+            "name": "ogd47_vollzugsresultate_pw.csv",
+            "path": "https://www.uvek-gis.admin.ch/BFE/ogd/47/ogd47_vollzugsresultate_pw.csv",
+            "profile": "tabular-data-resource",
+            "schema": {
+                "fields": [{
+                        "name": "jahr",
+                        "type": "year",
+                        "format": "default",
+                        "title": "Jahr",
+                        "description": "Jahr"
+                    },{
+                        "name": "nameeg",
+                        "type": "string",
+                        "format": "default",
+                        "title": "Importeur / Emissionsgemeinschaft",
+                        "description": "Name des Importeurs oder der Emissionsgemeinschaft gemäss Anmeldung BFE"
+                    }, {
+                        "name": "nischenpool",
+                        "type": "string",
+                        "format": "default",
+                        "title": "Fahrzeugpool",
+                        "description": "Bezeichnet die PW-Flotte, die für die Sanktionsberechnung berücksichtigt wird. Ein Importeur kann im Falle von Spezialzielen über mehrere Fahrzeugpools verfügen. Standard: Markenunabhängige Abrechnung mit 95 g/km-Ziel. Markenname XY: Klein- oder Nischenherstellerziel für die entsprechende Marke."
+                    }, {
+                        "name": "anzfz_total",
+                        "type": "integer",
+                        "format": "default",
+                        "title": "Anzahl PW",
+                        "description": "Anzahl erstmals in der Schweiz zugelassene Personenwagen im Geltungsbereich der CO2-Emissionsvorschriften."
+                    }, {
+                        "name": "leergewicht",
+                        "type": "integer",
+                        "format": "default",
+                        "title": "Durchschnittliches Leergewicht in kg",
+                        "description": "Durchschnittliches Leergewicht aller im Referenzjahr in der Schweiz erstmals zugelassenen Personenwagen des entsprechenden Importeurs. Wird für die Berechnung der individuellen Zielvorgabe verwendet."
+                    }, {
+                        "name": "co2",
+                        "type": "number",
+                        "format": "default",
+                        "title": "Durchschnitt CO2 in g/km (ungewichtet)",
+                        "description": "Ungewichteter Durchschnitt der spezifischen CO2-Emissionen aller im Referenzjahr erstmals zugelassenen Personenwagen im entsprechenden Fahrzeugpool, gerundet auf eine Nachkommastelle ."
+                    }, {
+                        "name": "co2_massgebend",
+                        "type": "number",
+                        "format": "default",
+                        "title": "Durchschnitt CO2 in g/km (gewichtet)",
+                        "description": "Sanktionsrelevanter CO2-Durchschnitt der im Referenzjahr zugelassenen Personenwagen gerundet auf eine Nachkommastelle (Ausschluss der 15% Fahrzeuge mit den höchsten CO2-Emisionen in der Flotte, doppelte Gewichtung von Fahrzeugen mit CO2-Emissionen von weniger als 50 Gramm, 20% reduzierte CO2-Emissionen von Erdgas/Biogas-PW)."
+                    }, {
+                        "name": "ziel",
+                        "type": "number",
+                        "format": "default",
+                        "title": "CO2-Ziel in g/km",
+                        "description": "Individuelle Zielvorgabe, basierend auf dem mittleren Leergewicht, gerundet auf eine Nachkommastelle."
+                    }, {
+                        "name": "ziel_abw",
+                        "type": "number",
+                        "format": "default",
+                        "title": "Zielabweichung in g/km",
+                        "description": "Differenz zwischen gewichtetem CO2-Wert und individueller Zielvorgabe, abgerundet auf eine Nachkommastelle"
+                    }, {
+                        "name": "sanktion_final",
+                        "type": "number",
+                        "format": "default",
+                        "title": "Sanktion CHF",
+                        "description": "Sanktion in Schweizer Franken"
+                    }, {
+                        "name": "gsc_beansprucht",
+                        "type": "number",
+                        "format": "default",
+                        "title": "SC beansprucht",
+                        "description": "Beanspruchte Supercredits im Referenzjahr"
+                    }, {
+                        "name": "gsc_reserve",
+                        "type": "number",
+                        "format": "default",
+                        "title": "SC Reserve",
+                        "description": "Supercredits-Reserve für die Folgejahre"
+                    }, {
+                        "name": "anteil_lev",
+                        "type": "number",
+                        "format": "default",
+                        "title": "LEV-Anteil (Prozentsatz)",
+                        "description": "Anteil (Prozentsatz) Fahrzeuge mit weniger als 50 Gramm CO2-Emissionen in der Flotte"
+                    }
+                ]
+            },
+            "title": "Vollzugsresultate der CO2-Emissionsvorschriften für Personenwagen",
+            "format": "csv",
+            "encoding": "UTF-8",
+            "description": "Seit dem 1. Juli 2012 gelten in der Schweiz - analog zur EU - CO2-Emissionsvorschriften für neue Personenwagen. Sie verpflichten die Schweizer Auto-Importeure, die Emissionen der erstmals zum Verkehr in der Schweiz zugelassenen Personenwagen zu senken. Am 1. Jnauar wurde der CO2-Zielwert von bislang 130 g CO2/km, auf 95 g CO2/km verschärft. Dieser Zielwert muss bis Ende 2022 erreicht werden. Im Zuge der Umstellung des Messverfahrens der CO2-Emissionen, wurde der CO2-Zielwert per 1. Januar 2021 von 95 g CO2/km, auf 118 g CO2/km angepasst. Überschreitungen werden mit einer Sanktionsabgabe gebüsst. Kurzbericht über die Vollzugsresultate des Vorjahres inkl. aggregierten Kennzahlen. Datengrundlage sind Zulassungsdaten (MOFIS), ergänzt um technische Daten (Typengenehmigungsdatenbank TARGA und vom ASTRA eigens erfasst Daten) sowie Verknüpfungen mit Daten zu registrierten Grossimporteuren. Herausgabe der Resultate müsste möglich sein. Rechtsgrundlage CO2-Verordnung, Art. 369. Abs. 3."
+        }
+    ],
+    "name": "ogd47_bfe",
+    "title": "Vollzugsresultate der CO2-Emissionsvorschriften für Personenwagen",
+    "description": "Seit dem 1. Juli 2012 gelten in der Schweiz - analog zur EU - CO2-Emissionsvorschriften für neue Personenwagen. Sie verpflichten die Schweizer Auto-Importeure, die Emissionen der erstmals zum Verkehr in der Schweiz zugelassenen Personenwagen zu senken. Am 1. Jnauar wurde der CO2-Zielwert von bislang 130 g CO2/km, auf 95 g CO2/km verschärft. Dieser Zielwert muss bis Ende 2022 erreicht werden. Im Zuge der Umstellung des Messverfahrens der CO2-Emissionen, wurde der CO2-Zielwert per 1. Januar 2021 von 95 g CO2/km, auf 118 g CO2/km angepasst. Überschreitungen werden mit einer Sanktionsabgabe gebüsst. Kurzbericht über die Vollzugsresultate des Vorjahres inkl. aggregierten Kennzahlen. Datengrundlage sind Zulassungsdaten (MOFIS), ergänzt um technische Daten (Typengenehmigungsdatenbank TARGA und vom ASTRA eigens erfasst Daten) sowie Verknüpfungen mit Daten zu registrierten Grossimporteuren. Herausgabe der Resultate müsste möglich sein. Rechtsgrundlage CO2-Verordnung, Art. 369. Abs. 3.",
+    "homepage": "http://www.bfe.admin.ch/ogd47",
+    "contributors": [{
+            "title": "OGD Fachstelle",
+            "role": "author"
+        }
+    ],
+    "licenses": [{
+            "name": "O-By",
+            "title": "Freie Nutzung. Quellenangabe ist Pflicht.",
+            "path": "https://opendata.swiss/de/terms-of-use"
+        }
+    ]
+}
