@@ -1,0 +1,7 @@
+ogd47:
+  tasks:
+    - source: ogd47/*.json
+
+ogd61:
+  tasks:
+    - source: ogd61/*.json
