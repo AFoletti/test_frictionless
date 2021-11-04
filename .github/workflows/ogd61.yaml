@@ -4,11 +4,11 @@ name: ogd61
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - ogd61/trigger.csv
   pull_request:
-    branches:
-      - main
+    paths:
+      - ogd61/trigger.csv
       
 jobs:
   validate:
