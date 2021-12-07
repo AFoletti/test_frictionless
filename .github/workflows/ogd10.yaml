@@ -1,0 +1,22 @@
+name: ogd10
+
+# Test the OGD10 data in https://www.uvek-gis.admin.ch/BFE/ogd/10/ogd10_energieforschungstatistik_ch.csv and ogd10_energieforschungstatistik_iea.csv
+
+on:
+  push:
+    paths:
+      - ogd10/trigger.csv
+  pull_request:
+    paths:
+      - ogd10/trigger.csv
+      
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Validate data
+        uses: frictionlessdata/repository@v1
+        with:
+            inquiry: ogd10
