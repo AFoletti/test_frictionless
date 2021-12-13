@@ -22,6 +22,14 @@ jobs:
             inquiry: ogd47
       - name: Validation OK
         if: ${{ failure() }}
+        uses: AbleLincoln/push-to-sftp@v1.0
+        with:
+          host: uvek-gis.admin.ch
+          port: 22
+          username: wm-uvekgis
+          password: ${{ secrets.SFTP_PASSWORD }}
+          local-dir: https://www.uvek-gis.admin.ch/BFE/ogd/staging/
+          server-dir: ./data/www/www.uvek-gis.admin.ch/htdocs/BFE/ogd/47/
         run: echo 'validation OK. Should move to prod folder'
       - name: Failure
         if: ${{ success() }}
