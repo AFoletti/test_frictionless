@@ -22,11 +22,11 @@ jobs:
             inquiry: ogd47
         if: success()
       - name: deploy file
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.1
-        with:
-          username: 'wm-uvekgis'
-          server: 'pub.uvek-gis.admin.ch'
-          ssh_private_key: ${{ secrets.SFTP_PASSWORD }} 
-          local_path: '${{ secrets.STAGING_AREA }}ogd47_vollzugsresultate_pw.csv'
-          remote_path: 'data/www/www.uvek-gis.admin.ch/htdocs/BFE/ogd/47/ogd47_vollzugsresultate_pw.csv'
-          args: '-o ConnectTimeout=5'
+        uses: AbleLincoln/push-to-sftp@v1.2
+          with:
+            host: pub.uvek-gis.admin.ch
+            port: 22
+            username: wm-uvekgis
+            password: ${{ secrets.SFTP_PASSWORD }}
+            local-dir: ${{ secrets.STAGING_AREA }}ogd47_vollzugsresultate_pw.csv
+            server-dir: data/www/www.uvek-gis.admin.ch/htdocs/BFE/ogd/47/ogd47_vollzugsresultate_pw.csv
