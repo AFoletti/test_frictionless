@@ -20,6 +20,12 @@ jobs:
         uses: frictionlessdata/repository@v1
         with:
             inquiry: ogd47
-        if: success()
       - name: Validation OK
+        if: ${{ success() }}
         run: echo 'validation OK. Should move to prod folder'
+      - name: Failure
+        if: ${{ failure(Validate data) }}
+        run: echo 'Validation failure'
+      - name: Failure
+        if: ${{ failure(Validation OK) }}
+        run: echo 'SFTP Move'
