@@ -20,3 +20,13 @@ jobs:
         uses: frictionlessdata/repository@v1
         with:
             inquiry: ogd47
+        if: success()
+      - name: deploy file
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.1
+        with:
+          username: 'wm-uvekgis'
+          server: 'pub.uvek-gis.admin.ch'
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
+          local_path: 'www.uvek-gis.admin.ch/BFE/ogd/staging/ogd47_vollzugsresultate_pw.csv'
+          remote_path: 'www.uvek-gis.admin.ch/BFE/ogd/47/ogd47_vollzugsresultate_pw.csv'
+          args: '-o ConnectTimeout=5'
