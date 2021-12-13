@@ -26,7 +26,7 @@ jobs:
         with:
           username: 'wm-uvekgis'
           server: 'pub.uvek-gis.admin.ch'
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
-          local_path: 'www.uvek-gis.admin.ch/BFE/ogd/staging/ogd47_vollzugsresultate_pw.csv'
+          ssh_private_key: ${{ secrets.SFTP_PASSWORD }} 
+          local_path: '${{ secrets.STAGING_AREA }}ogd47_vollzugsresultate_pw.csv'
           remote_path: 'www.uvek-gis.admin.ch/BFE/ogd/47/ogd47_vollzugsresultate_pw.csv'
           args: '-o ConnectTimeout=5'
