@@ -21,12 +21,5 @@ jobs:
         with:
             inquiry: ogd47
         if: success()
-      - name: deploy file
-        uses: anvil-solutions/Fast-FTP-Action@2.1.3
-        with:
-          server: pub.uvek-gis.admin.ch
-          username: wm-uvekgis@pub.uvek-gis.admin.ch
-          password: ${{ secrets.SFTP_PASSWORD }}
-          method: sftp
-          local_dir: ${{ secrets.STAGING_AREA }}ogd47_vollzugsresultate_pw.csv
-          remote_dir: data/www/www.uvek-gis.admin.ch/htdocs/BFE/ogd/47/ogd47_vollzugsresultate_pw.csv
+      - name: Validation OK
+        run: echo 'validation OK. Should move to prod folder'
