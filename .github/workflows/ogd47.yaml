@@ -22,7 +22,7 @@ jobs:
             inquiry: ogd47
       - name: Validation OK
         if: ${{ success() }}
-        uses: AbleLincoln/push-to-sftp@v1
+        uses: AbleLincoln/push-to-sftp@v1.2
         with:
           host: pub.uvek-gis.admin.ch
           port: 22
