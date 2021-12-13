@@ -24,7 +24,7 @@ jobs:
         if: ${{ success() }}
         uses: AbleLincoln/push-to-sftp@v1
         with:
-          host: uvek-gis.admin.ch
+          host: pub.uvek-gis.admin.ch
           port: 22
           username: wm-uvekgis
           password: ${{ secrets.SFTP_PASSWORD }}
