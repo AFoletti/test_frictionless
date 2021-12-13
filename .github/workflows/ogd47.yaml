@@ -28,5 +28,5 @@ jobs:
           server: 'sftp://pub.uvek-gis.admin.ch'
           ssh_private_key: ${{ secrets.SFTP_PASSWORD }} 
           local_path: '${{ secrets.STAGING_AREA }}ogd47_vollzugsresultate_pw.csv'
-          remote_path: 'pub.uvek-gis.admin.ch/data/www/www.uvek-gis.admin.ch/htdocs/BFE/ogd/47/ogd47_vollzugsresultate_pw.csv'
+          remote_path: 'sftp://pub.uvek-gis.admin.ch/data/www/www.uvek-gis.admin.ch/htdocs/BFE/ogd/47/ogd47_vollzugsresultate_pw.csv'
           args: '-o ConnectTimeout=5'
