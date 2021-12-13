@@ -22,11 +22,11 @@ jobs:
             inquiry: ogd47
         if: success()
       - name: deploy file
-        uses: AbleLincoln/push-to-sftp@v1.2
+        uses: anvil-solutions/Fast-FTP-Action@2.1.3
         with:
-          host: pub.uvek-gis.admin.ch
-          port: 22
+          server: pub.uvek-gis.admin.ch
           username: wm-uvekgis
           password: ${{ secrets.SFTP_PASSWORD }}
-          local-dir: ${{ secrets.STAGING_AREA }}ogd47_vollzugsresultate_pw.csv
-            server-dir: data/www/www.uvek-gis.admin.ch/htdocs/BFE/ogd/47/ogd47_vollzugsresultate_pw.csv
+          method: sftp
+          local_dir: ${{ secrets.STAGING_AREA }}ogd47_vollzugsresultate_pw.csv
+          remote_dir: data/www/www.uvek-gis.admin.ch/htdocs/BFE/ogd/47/ogd47_vollzugsresultate_pw.csv
