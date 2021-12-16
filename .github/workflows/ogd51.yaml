@@ -1,0 +1,22 @@
+name: ogd51
+
+# Test the OGD51 data in https://www.uvek-gis.admin.ch/BFE/ogd/51/ogd51_wochenstatistik_elektrizitaetsbilanz.csv
+
+on:
+  push:
+    paths:
+      - ogd51/trigger.csv
+  pull_request:
+    paths:
+      - ogd51/trigger.csv
+      
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Validate data
+        uses: frictionlessdata/repository@v1
+        with:
+            inquiry: ogd51
