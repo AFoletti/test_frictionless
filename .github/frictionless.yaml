@@ -6,6 +6,10 @@ ogd47:
   tasks:
     - source: https://www.uvek-gis.admin.ch/BFE/ogd/47/datapackage.json
 
+ogd51:
+  tasks:
+    - source: https://www.uvek-gis.admin.ch/BFE/ogd/51/datapackage.json
+
 ogd61:
   tasks:
     - source: https://www.uvek-gis.admin.ch/BFE/ogd/61/datapackage.json
