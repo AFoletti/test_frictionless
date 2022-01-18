@@ -1,0 +1,22 @@
+name: ogd17
+
+# Test the OGD17 data in https://www.uvek-gis.admin.ch/BFE/ogd/17/ogd17_fuellungsgrad_speicherseennz.csv
+
+on:
+  push:
+    paths:
+      - ogd17/trigger.csv
+  pull_request:
+    paths:
+      - ogd17/trigger.csv
+      
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Validate data
+        uses: frictionlessdata/repository@v1
+        with:
+            inquiry: ogd17
