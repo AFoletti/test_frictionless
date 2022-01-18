@@ -1,6 +1,10 @@
 ogd10:
   tasks:
     - source: https://www.uvek-gis.admin.ch/BFE/ogd/10/datapackage.json
+    
+ogd17:
+  tasks:
+    - source: https://www.uvek-gis.admin.ch/BFE/ogd/17/datapackage.json
 
 ogd47:
   tasks:
