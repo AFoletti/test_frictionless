@@ -19,5 +19,4 @@ jobs:
       - name: Validate data
         uses: frictionlessdata/repository@v1
         with:
-            inquiry: staging
             inquiry: staging_Z
