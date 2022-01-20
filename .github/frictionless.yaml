@@ -17,3 +17,11 @@ ogd51:
 ogd61:
   tasks:
     - source: https://www.uvek-gis.admin.ch/BFE/ogd/61/datapackage.json
+
+staging_Z:
+  tasks:
+    - source: https://www.uvek-gis.admin.ch/BFE/ogd/staging/datapackage_ZIP.json
+
+staging:
+  tasks:
+    - source: https://www.uvek-gis.admin.ch/BFE/ogd/staging/datapackage_NoZIP.json
