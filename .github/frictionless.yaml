@@ -21,3 +21,4 @@ ogd61:
 staging:
   tasks:
     - source: https://www.uvek-gis.admin.ch/BFE/ogd/staging/datapackage_ZIP.json
+      type: package 
