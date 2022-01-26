@@ -1,0 +1,22 @@
+name: ogd56
+
+# Test the OGD56 data in https://www.uvek-gis.admin.ch/BFE/ogd/56/ogd56_energieperspektiven2050.csv
+
+on:
+  push:
+    paths:
+      - ogd56/trigger.csv
+  pull_request:
+    paths:
+      - ogd56/trigger.csv
+      
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Validate data
+        uses: frictionlessdata/repository@v1
+        with:
+            inquiry: ogd56
