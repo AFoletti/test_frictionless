@@ -14,6 +14,11 @@ ogd51:
   tasks:
     - source: https://www.uvek-gis.admin.ch/BFE/ogd/51/datapackage.json
 
+ogd56:
+  tasks:
+    - source: https://www.uvek-gis.admin.ch/BFE/ogd/56/datapackage.json
+      type: package 
+      
 ogd61:
   tasks:
     - source: https://www.uvek-gis.admin.ch/BFE/ogd/61/datapackage.json
