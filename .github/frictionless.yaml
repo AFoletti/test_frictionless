@@ -5,6 +5,10 @@ ogd10:
 ogd17:
   tasks:
     - source: https://www.uvek-gis.admin.ch/BFE/ogd/17/datapackage.json
+    
+ogd25:
+  tasks:
+    - source: https://www.uvek-gis.admin.ch/BFE/ogd/25/datapackage.json
 
 ogd47:
   tasks:
