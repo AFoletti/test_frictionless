@@ -1,0 +1,22 @@
+name: ogd6
+
+# Test the OGD6 data in https://www.uvek-gis.admin.ch/BFE/ogd/6/ogd6_kev-bezueger.csv
+
+on:
+  push:
+    paths:
+      - ogd6/trigger.csv
+  pull_request:
+    paths:
+      - ogd6/trigger.csv
+      
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Validate data
+        uses: frictionlessdata/repository@v1
+        with:
+            inquiry: ogd6
