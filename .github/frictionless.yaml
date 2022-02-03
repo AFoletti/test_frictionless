@@ -30,6 +30,10 @@ ogd56:
 ogd61:
   tasks:
     - source: https://www.uvek-gis.admin.ch/BFE/ogd/61/datapackage.json
+    
+ogd84:
+  tasks:
+    - source: https://www.uvek-gis.admin.ch/BFE/ogd/84/datapackage.json
 
 staging:
   tasks:
