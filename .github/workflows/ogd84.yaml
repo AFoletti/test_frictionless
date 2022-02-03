@@ -1,0 +1,22 @@
+name: ogd84
+
+# Test the OGD84 data in https://www.uvek-gis.admin.ch/BFE/ogd/84/ogd84_einmalverguetung.csv
+
+on:
+  push:
+    paths:
+      - ogd84/trigger.csv
+  pull_request:
+    paths:
+      - ogd84/trigger.csv
+      
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Validate data
+        uses: frictionlessdata/repository@v1
+        with:
+            inquiry: ogd84
