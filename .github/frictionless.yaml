@@ -38,5 +38,5 @@ ogd84:
 
 staging:
   tasks:
-    - source: https://www.uvek-gis.admin.ch/BFE/ogd/staging/datapackage_ZIP.json
+    - source: https://www.uvek-gis.admin.ch/BFE/ogd/staging/datapackage.json
       type: package 
