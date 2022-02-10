@@ -36,6 +36,10 @@ ogd84:
   tasks:
     - source: https://www.uvek-gis.admin.ch/BFE/ogd/84/datapackage.json
 
+ogd90:
+  tasks:
+    - source: https://www.uvek-gis.admin.ch/BFE/ogd/90/datapackage.json
+    
 staging:
   tasks:
     - source: https://www.uvek-gis.admin.ch/BFE/ogd/staging/datapackage.json
