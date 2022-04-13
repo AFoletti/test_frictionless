@@ -1,0 +1,22 @@
+name: ogd60
+
+# Test the OGD61 data in https://www.uvek-gis.admin.ch/BFE/ogd/60/ogd60_*
+
+on:
+  push:
+    paths:
+      - ogd60/trigger.csv
+  pull_request:
+    paths:
+      - ogd60/trigger.csv
+      
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Validate data
+        uses: frictionlessdata/repository@v1
+        with:
+            inquiry: ogd60
