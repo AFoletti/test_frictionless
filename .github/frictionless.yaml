@@ -14,6 +14,10 @@ ogd17:
 ogd25:
   tasks:
     - source: https://www.uvek-gis.admin.ch/BFE/ogd/25/datapackage.json
+    
+ogd35:
+  tasks:
+    - source: https://www.uvek-gis.admin.ch/BFE/ogd/35/datapackage.json
 
 ogd42:
   tasks:
