@@ -1,0 +1,22 @@
+name: ogd98
+
+# Test the OGD98 data in https://www.uvek-gis.admin.ch/BFE/ogd/98/ogd98_publikationen.csv
+
+on:
+  push:
+    paths:
+      - ogd98/trigger.csv
+  pull_request:
+    paths:
+      - ogd98/trigger.csv
+      
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Validate data
+        uses: frictionlessdata/repository@v1
+        with:
+            inquiry: ogd98
