@@ -75,6 +75,10 @@ ogd98:
 ogd105:
   tasks:
     - source: https://www.uvek-gis.admin.ch/BFE/ogd/105/datapackage.json
+    
+ogd109:
+  tasks:
+    - source: https://www.uvek-gis.admin.ch/BFE/ogd/109/datapackage.json
 
 staging:
   tasks:
