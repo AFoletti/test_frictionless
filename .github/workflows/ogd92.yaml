@@ -1,0 +1,22 @@
+name: ogd92
+
+# Test the OGD92 data in https://www.uvek-gis.admin.ch/BFE/ogd/92/
+
+on:
+  push:
+    paths:
+      - ogd92/trigger.csv
+  pull_request:
+    paths:
+      - ogd92/trigger.csv
+      
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Validate data
+        uses: frictionlessdata/repository@v1
+        with:
+            inquiry: ogd92
