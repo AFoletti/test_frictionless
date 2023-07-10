@@ -94,5 +94,5 @@ ogd109:
 
 staging:
   tasks:
-    - resource: https://www.uvek-gis.admin.ch/BFE/ogd/staging_old/datapackage.json
+    - package: https://www.uvek-gis.admin.ch/BFE/ogd/staging_old/datapackage.json
       type: package 
