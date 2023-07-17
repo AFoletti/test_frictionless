@@ -1,6 +1,6 @@
 name: staging
 
-# Test the staging data in https://www.uvek-gis.admin.ch/BFE/ogd/staging/
+# Test the staging data in https://www.uvek-gis.admin.ch/BFE/ogd/staging_old/
 
 on:
   push:
